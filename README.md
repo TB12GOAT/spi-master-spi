@@ -1,2 +1,3 @@
 # spi-master-spi
-Yessir
+Made by @GarrettRocky69
+any questions just hit me up on twitter
