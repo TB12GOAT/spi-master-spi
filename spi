@@ -107,11 +107,6 @@ deb ()	{
 	# Updating package database
 	apt-get update
 	# Installing necessary packages (Squid, apache2-utils for htpassword and dependencies)
-	apt-get install apache2-utils squid3 -y
-	# Asking user to set a username via read and writing it into $usrn
-	read -e -p "Your desired username: " usrn
-	# Creating user with username from $usrn and asking user to set a password
-	htpasswd -c /etc/squid3/passwd $usrn
 	# Downloading Squid configuration
 	wget -O /etc/squid3/squid.conf https://gist.githubusercontent.com/TB12GOAT/04999ec55a7eb705a5ac66c2ff90f03c/raw/39eadccd12887845aa245a9e663931d37c9a6fa2/debian.conf --no-check-certificate
 	# Creating empty blacklist.acl file for further blacklisting entries
